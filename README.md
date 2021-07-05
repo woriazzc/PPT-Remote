@@ -34,5 +34,7 @@
 
 4. 确定即将放映PPT的PC的IP地址，并保证与手机（遥控器）在同一局域网。
 
-5. 手机浏览器进入 http://xxx.xxx.xxx.xxx （PC的ip地址）。
+5. 打开需要放映的 PPT
+
+6. 手机浏览器进入 http://xxx.xxx.xxx.xxx （PC的ip地址）。
 
