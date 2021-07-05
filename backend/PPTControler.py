@@ -9,6 +9,7 @@ import pythoncom
 VK_CODE = {
 	'spacebar':0x20,
 	'down_arrow':0x28,
+	'esc':0x1B
 }
 
 class PPTControler:
@@ -24,8 +25,13 @@ class PPTControler:
 			return self.getActivePresentationSlideIndex()
 
 	def click(self):
-		win32api.keybd_event(VK_CODE['down_arrow'],0,0,0)
-		win32api.keybd_event(VK_CODE['down_arrow'],0,win32con.KEYEVENTF_KEYUP,0)
+		win32api.keybd_event(VK_CODE['spacebar'],0,0,0)
+		win32api.keybd_event(VK_CODE['spacebar'],0,win32con.KEYEVENTF_KEYUP,0)
+		return self.getActivePresentationSlideIndex()
+
+	def endPlay(self):
+		win32api.keybd_event(VK_CODE['esc'], 0, 0, 0)
+		win32api.keybd_event(VK_CODE['esc'], 0, win32con.KEYEVENTF_KEYUP, 0)
 		return self.getActivePresentationSlideIndex()
 
 	def gotoSlide(self,index):

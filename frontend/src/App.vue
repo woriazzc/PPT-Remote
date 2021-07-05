@@ -1,13 +1,14 @@
 <template>
-  <el-button type="primary" icon="el-icon-edit"></el-button>
-
+  <div id="app">
+    <router-view/>
+  </div>
 </template>
 
 <script>
 
 export default {
   name: 'App',
-  components: {}
+  components: {},
 }
 </script>
 
